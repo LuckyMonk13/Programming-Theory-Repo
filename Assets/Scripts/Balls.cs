@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Balls : MonoBehaviour
+public class Balls : MonoBehaviour // INHERITANCE
 {
 [SerializeField] protected TextMeshProUGUI colorNameText;
 private AudioSource audioSource;
@@ -11,7 +11,7 @@ private string colorName;
 
 protected string ColorName
     {
-        get => colorName;
+        get => colorName; // ENCAPSULATION
         set
         {
             if (value.Length <= 10)
@@ -31,7 +31,7 @@ protected string ColorName
     }
 
 
-    protected virtual void OnMouseDown()
+    protected virtual void OnMouseDown() // POLYMORPHISM
     {
             audioSource.Play();
     }
